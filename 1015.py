@@ -1,0 +1,15 @@
+# 1015 수열 정리
+n = int(input())
+l = [list(map(int,input().split()))]
+l.append(list(range(n)))
+#print(l)
+l= list(zip(*l))
+l.sort()
+l = list(zip(*l))
+#print(l)
+l.append(tuple(range(n)))
+#print(l)
+l= list(zip(*l))
+l.sort(key=lambda ele:ele[1])
+l = list(zip(*l))
+print(" ".join(map(str,l[2])))
